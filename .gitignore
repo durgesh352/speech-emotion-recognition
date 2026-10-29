@@ -20,6 +20,7 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+.ipynb_checkpoints/
 
 # Temporary Audio Dumps (keep preset samples)
 data/temp/

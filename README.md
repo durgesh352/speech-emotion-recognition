@@ -101,11 +101,19 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Launch the Interactive Dashboard
+### 3. Launch the Interactive Dashboard or JupyterLab
+
+#### To open the Streamlit Web Dashboard:
 ```bash
 streamlit run app.py
 ```
 Open your browser at `http://localhost:8501`.
+
+#### To run the JupyterLab Interactive Notebook:
+```bash
+jupyter lab notebook_demo.ipynb
+```
+Or double-click `run_jupyter.bat` on Windows.
 
 ---
 
