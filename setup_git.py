@@ -12,9 +12,18 @@ import subprocess
 import argparse
 from pathlib import Path
 
+# Fix Windows console encoding for Unicode / Emojis
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
+PROJECT_DIR = Path(__file__).resolve().parent
+
 def run_git_cmd(cmd: list[str]) -> tuple[int, str]:
     try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, check=False)
+        proc = subprocess.run(cmd, capture_output=True, text=True, check=False, cwd=PROJECT_DIR)
         return proc.returncode, proc.stdout.strip() + " " + proc.stderr.strip()
     except Exception as e:
         return 1, str(e)
