@@ -1,0 +1,26 @@
+# Virtual Environment
+venv/
+env/
+.env
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary Audio Dumps (keep preset samples)
+data/temp/
+*.tmp
